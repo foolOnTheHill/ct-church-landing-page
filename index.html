@@ -222,7 +222,7 @@
                     // Limpa o retorno do Google para virar um JSON válido
                     const data = JSON.parse(text.substr(47).slice(0, -2));
                     
-                    const rows = data.table.rows;
+                    const rows = data.table.rows.slice(1);
                     const container = document.getElementById('pg-container');
                     container.innerHTML = ''; // Limpa o carregamento anterior
             
